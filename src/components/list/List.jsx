@@ -26,9 +26,9 @@ const List = props => {
 						<div className={css.task} style={{background: LIST_COLORS[task.status]}}>{task.title}</div>
 					</Link>
 			) : 
-				<p>No tasks added yet</p>
+					<p>No tasks added yet</p>
 			}
-			{type === LIST_TYPES.BACKLOG && <button onClick={handleAddNewClick} className={css.addButton}>+ Add new task</button>}
+			{type === LIST_TYPES.BACKLOG && <button onClick={handleAddNewClick} className={css.addButton}>+ Add card</button>}
 			{type === LIST_TYPES.BACKLOG && isFormVisible && (
 				<FormAddNewTask formSubmit={formSubmit} />
 			)}

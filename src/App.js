@@ -1,16 +1,16 @@
-import { useState, useEffect } from 'react'
+import { useState} from 'react'
 import {BrowserRouter as Router} from 'react-router-dom'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import Main from './components/main/Main'
 
 function App() {
-	const initialState = JSON.parse(window.localStorage.getItem('tasks')) || []
-  const [tasks, setTasks] = useState(initialState)
+	// const initialState = JSON.parse(window.localStorage.getItem('tasks')) || []
+  const [tasks, setTasks] = useState([])
 
-	useEffect(() => {
-		window.localStorage.setItem('tasks', JSON.stringify(tasks))
-	}, [tasks])
+	// useEffect(() => {
+	// 	window.localStorage.setItem('tasks', JSON.stringify(tasks))
+	// }, [tasks])
 
   return (
 		<div className='wrapper'>
