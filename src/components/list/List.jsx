@@ -28,7 +28,7 @@ const List = props => {
 			) : 
 					<p>No tasks added yet</p>
 			}
-			{type === LIST_TYPES.BACKLOG && <button onClick={handleAddNewClick} className={css.addButton}>+ Add card</button>}
+			{type === LIST_TYPES.BACKLOG && !isFormVisible && <button onClick={handleAddNewClick} className={css.addButton}>+ Add card</button>}
 			{type === LIST_TYPES.BACKLOG && isFormVisible && (
 				<FormAddNewTask formSubmit={formSubmit} />
 			)}
