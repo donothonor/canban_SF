@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { LIST_TYPES, LIST_COLORS } from '../../config'
 import FormAddNewTask from '../forms/FormAddNewTask'
+import Options from '../options/Options'
 import css from './List.module.css'
 
 const List = props => {
@@ -28,10 +29,9 @@ const List = props => {
 			) : 
 					<p>No tasks added yet</p>
 			}
-			{type === LIST_TYPES.BACKLOG && !isFormVisible && <button onClick={handleAddNewClick} className={css.addButton}>+ Add card</button>}
-			{type === LIST_TYPES.BACKLOG && isFormVisible && (
-				<FormAddNewTask formSubmit={formSubmit} />
-			)}
+			{!isFormVisible && <button onClick={handleAddNewClick} className={css.addButton}>+ Add card</button>}
+			{type === LIST_TYPES.BACKLOG && isFormVisible && (<FormAddNewTask formSubmit={formSubmit} />)}
+			{type === LIST_TYPES.READY && isFormVisible &&  (<Options />)}
 		</div>
 	)
 }
