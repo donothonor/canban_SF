@@ -6,7 +6,7 @@ import Options from '../options/Options'
 import css from './List.module.css'
 
 const List = props => {
-	const {type, title, tasks, addNewTask} = props
+	const {type, title, tasks, addNewTask, currentTasks, setTasks} = props
 	const [isFormVisible, setFormVisible] = useState(false)
 
 	const handleAddNewClick = () => {
@@ -24,14 +24,16 @@ const List = props => {
 			{tasks.length? 
 				tasks.map(task => 
 					<Link to={`/tasks/${task.id}`} key={task.id} className={css.taskLink}>
-						<div className={css.task} style={{background: LIST_COLORS[task.status]}}>{task.title}</div>
+						<div className={css.task}>{task.title}</div>
 					</Link>
 			) : 
 					<p>No tasks added yet</p>
 			}
+
+			
 			{!isFormVisible && <button onClick={handleAddNewClick} className={css.addButton}>+ Add card</button>}
 			{type === LIST_TYPES.BACKLOG && isFormVisible && (<FormAddNewTask formSubmit={formSubmit} />)}
-			{type === LIST_TYPES.READY && isFormVisible &&  (<Options />)}
+			{type !== LIST_TYPES.BACKLOG && isFormVisible &&  (<Options currentTasks={currentTasks} listTitle={type} setTasks={setTasks}/>)}
 		</div>
 	)
 }

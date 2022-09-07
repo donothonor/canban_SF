@@ -1,5 +1,4 @@
 import { useRouteMatch, Link } from 'react-router-dom'
-import {LIST_COPY, LIST_COLORS } from '../../config'
 import notFoundIcon from '../../assets/not-found.svg'
 import css from './TaskDetail.module.css'
 
@@ -15,7 +14,6 @@ const TaskDetail = (props) => {
 			<>
 				<div className={css.header}>
 					<h2 className={css.title}>{task.title}</h2>
-					<p className={css.status} style={{background: LIST_COLORS[task.status]}}>{LIST_COPY[task.status]}</p>
 				</div>
 				<p>{task.description || 'No description added yet'}</p>
 			</>

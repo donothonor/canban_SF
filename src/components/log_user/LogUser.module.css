@@ -1,0 +1,25 @@
+.avatarWrapper {
+    width: 38.5px;
+    height: 38.5px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.avatar {
+    margin: 15%;
+}
+
+.userLogo {
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.arrow {
+    transition: all 0.5s;
+}
+.rotateArrow {
+    transition: all 0.5s;
+    transform: rotate(180deg)
+}

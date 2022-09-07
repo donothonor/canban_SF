@@ -30,6 +30,8 @@ const Board = (props) => {
 						title={LIST_COPY[type]}
 						tasks={listTasks || []}
 						addNewTask={addNewTask}
+						currentTasks={tasks}
+						setTasks={setTasks}
 					/>
 				)
 			})

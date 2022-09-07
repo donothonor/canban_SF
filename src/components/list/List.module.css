@@ -1,6 +1,6 @@
 .list {
 	width: 350px;
-	background: #fff;
+	background: #EBECF0;
 	padding: 20px;
 	border-radius: 8px;
 	box-sizing: border-box;
@@ -13,8 +13,8 @@
 }
 
 .task {
-	background: #465671;
-	color: #fff;
+	background: white;
+	color: black;
 	margin: 7px 0;
 	padding: 8px;
 	border-radius: 8px;
