@@ -20,6 +20,17 @@ function LogUser () {
                 </div>
                 <img className={isMenuVisible? css.arrow : css.rotateArrow} src={arrow}></img>
             </div>
+            {isMenuVisible && (
+            <div className={css.menuWrapper}>
+                <div className={css.menuArrow}></div>
+                <div className={css.menu}>
+                    <ul>
+                        <li>Profile</li>
+                        <li>Logout</li>
+                    </ul>
+                </div>
+            </div>
+            )}
         </>
     )
 }

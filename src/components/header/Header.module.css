@@ -6,3 +6,13 @@
 	padding: 0 20px;
 	justify-content: space-between;
 }
+
+@media screen and (max-width: 600px) {
+	.title {
+		display: none;
+	}
+	.header {
+		height: 81.875px;
+		justify-content: flex-end;
+	}
+}

@@ -23,3 +23,36 @@
     transition: all 0.5s;
     transform: rotate(180deg)
 }
+
+.menuWrapper {
+    border-radius: 5px;
+    position: absolute;
+    top: 8%;
+    right: 25px;
+    width: 150px;
+    background-color: white;
+    color: black;
+}
+
+.menu {
+    padding-left: 10px;
+}
+
+.menuArrow {
+    background-color: white;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -5px;
+    left: 73%;
+    width: 11px;
+    height: 11px;
+}
+
+li {
+    cursor: pointer;
+}
+ul {
+    font-weight: bold;
+    padding: 0;
+    list-style-type: none;
+}

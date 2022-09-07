@@ -15,8 +15,7 @@ function Footer(props) {
 				})}
 			</div>
 			<div className={css.copy}>
-				<p>Kanban board by <a href='https://github.com/donothonor' target='_blank' rel='noreferrer'>@donothonor</a>, 2022</p>
-				
+				<p>Kanban board by <a href='https://github.com/donothonor' target='_blank' rel='noreferrer'>@donothonor</a>, 2022</p>	
 			</div>
 		</footer>
 	)
