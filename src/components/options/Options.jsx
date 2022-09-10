@@ -6,10 +6,12 @@ import {LIST_TYPES} from '../../config'
 
 function Options (props) {
 
+    let filtredTasks
+
     const match = useRouteMatch()
 	const {taskId} = match.params
 
-    let {currentTasks, listTitle, setTasks} = props
+    const {currentTasks, listTitle, setTasks} = props
 
     const handleChange = e => {
         console.log(e)
@@ -25,20 +27,20 @@ function Options (props) {
 
     switch (listTitle) {
         case 'ready':
-            currentTasks = currentTasks.filter(task => task.status === 'backlog')
+            filtredTasks = currentTasks.filter(task => task.status === 'backlog')
             break;
         case 'inProgress':
-            currentTasks = currentTasks.filter(task => task.status === 'ready')    
+            filtredTasks = currentTasks.filter(task => task.status === 'ready')    
             break;
         case 'finished' :
-            currentTasks = currentTasks.filter(task => task.status === 'inProgress')
+            filtredTasks = currentTasks.filter(task => task.status === 'inProgress')
             break;    
     }
 
     return (
         <div className={css.selectWrapper}>
             <select onChange={handleChange}>
-                {currentTasks.map(task => {
+                {filtredTasks.map(task => {
                     return (
                         <option key={task.id} value={listTitle} id={task.id}>{task.title}</option>
                     )

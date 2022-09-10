@@ -31,7 +31,7 @@ const List = props => {
 			}
 
 			
-			{!isFormVisible && <button onClick={handleAddNewClick} className={css.addButton}>+ Add card</button>}
+			{!isFormVisible && <button onClick={handleAddNewClick}  className={css.addButton}>+ Add card</button>}
 			{type === LIST_TYPES.BACKLOG && isFormVisible && (<FormAddNewTask formSubmit={formSubmit} />)}
 			{type !== LIST_TYPES.BACKLOG && isFormVisible &&  (<Options currentTasks={currentTasks} listTitle={type} setTasks={setTasks}/>)}
 		</div>
