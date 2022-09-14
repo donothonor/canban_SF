@@ -1,5 +1,4 @@
 import {useState} from 'react'
-import clsx from 'clsx'
 import css from './Forms.module.css'
 
 const FormAddNewTask = props => {
@@ -23,7 +22,6 @@ const FormAddNewTask = props => {
 	return (
 		<form onSubmit={handleSubmit} className={css.form}>
 			<input className={css.input} id='taskTitle' name='title' type='text' placeholder='Enter task title' onChange={handleChange} value={values.title} />
-			{/* <textarea className={clsx(css.input, css.textarea)} id='taskDescription' name='description' placeholder='Enter task description' value={values.description} onChange={handleChange} /> */}
 			<button className={css.submit} type='submit'>Submit</button>
 		</form>
 	)
